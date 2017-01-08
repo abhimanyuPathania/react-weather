@@ -7,7 +7,7 @@ var ErrorModal = React.createClass({
 		message: React.PropTypes.string.isRequired
 	},
 
-	getDefaultProp: function () {
+	getDefaultProps: function () {
 		return {
 			title: 'Error'
 		}
