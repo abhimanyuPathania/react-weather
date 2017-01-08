@@ -41,6 +41,7 @@ module.exports = {
       WeatherMessage: 'app/components/WeatherMessage.jsx',
       About: 'app/components/About.jsx',
       Examples: 'app/components/Examples.jsx',
+      ErrorModal: 'app/components/ErrorModal.jsx',
       openWeatherMap: 'app/api/openWeatherMap.jsx'
     },
 
@@ -68,5 +69,5 @@ module.exports = {
   // cheap-module-eval-source-map
   // inline-source-map
   // eval-source-map
-  devtool: 'cheap-module-eval-source-map'
+  devtool: 'inline-source-map'
 };
