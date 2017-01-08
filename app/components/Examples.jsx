@@ -1,9 +1,17 @@
 var React = require('react');
+var {Link} = require('react-router')
 
 
 var Examples = (props) => {
 	return (
-		<h2>Examples Component</h2>
+		<div>
+			<h1 className="text-center">Examples</h1>
+			<p>Here are a few examples locations to try out.</p>
+			<ol>
+				<li><Link to="/?location=amritsar">Amritsar</Link></li>
+				<li><Link to="/?location=rio">Rio, Brazil</Link></li>
+			</ol>
+		</div>
 	);
 }
 
