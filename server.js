@@ -1,11 +1,15 @@
 var express = require('express');
 var compression = require('compression');
+var favicon = require('serve-favicon');
 
 // Create our app
 var app = express();
 
 // compress responses
 app.use(compression());
+
+// server favicon
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 const PORT = process.env.PORT || 3000;
 
