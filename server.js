@@ -1,6 +1,7 @@
 var express = require('express');
 var compression = require('compression');
-var favicon = require('serve-favicon');
+
+const PORT = process.env.PORT || 3000;
 
 // Create our app
 var app = express();
@@ -8,11 +9,7 @@ var app = express();
 // compress responses
 app.use(compression());
 
-// server favicon
-app.use(favicon(__dirname + '/public/favicon.ico'));
-
-const PORT = process.env.PORT || 3000;
-
+// send https to http for open weather api to work
 app.use(function(req, res, next) {
 	if (req.headers['x-forwarded-proto'] === 'https'){
 		res.redirect('http://' + req.hostname + req.url);	
